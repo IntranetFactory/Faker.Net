@@ -64,7 +64,7 @@ namespace Faker.Locales
                                     "#{CityPrefix} @{Name.GetFirstName}",
                                     "@{Name.GetFirstName}#{CitySuffix}",
                                     "@{Name.GetFirstName}#{CitySuffix}"};
-            }   
+            }
         }
 
         public override string[] StreetNameFormat
@@ -74,7 +74,7 @@ namespace Faker.Locales
                 return new[] {
                                     "@{Name.GetFirstName}#{StreetSuffix}",
                                     "@{Name.GetLastName}#{StreetSuffix}"};
-            }   
+            }
         }
 
         public override string[] BuildingNumberFormat
@@ -85,7 +85,7 @@ namespace Faker.Locales
                                     "#",
                                     "##",
                                     "###"};
-            }  
+            }
         }
 
         public override string[] StreetAddressFormat
@@ -334,7 +334,7 @@ namespace Faker.Locales
                                     "Ways",
                                     "Well",
                                     "Wells"};
-            }   
+            }
         }
 
         public override string[] SecondaryStreetNameFormat
@@ -343,7 +343,7 @@ namespace Faker.Locales
             {
                 return new[] {
                                     "#{SecondaryStreetName} ###"};
-            }   
+            }
         }
 
         public override string[] SecondaryStreetName
@@ -353,7 +353,7 @@ namespace Faker.Locales
                 return new[] {
                                     "Apt.",
                                     "Suite"};
-            }   
+            }
 
         }
 
@@ -923,7 +923,7 @@ namespace Faker.Locales
                                     "West Virginia",
                                     "Wisconsin",
                                     "Wyoming"};
-            }   
+            }
         }
 
         public override string[] StateAbbr
@@ -981,7 +981,7 @@ namespace Faker.Locales
                                     "WV",
                                     "WI",
                                     "WY"};
-            }   
+            }
         }
 
         public override string[] TimeZone
@@ -1142,10 +1142,10 @@ namespace Faker.Locales
                 return new[] {
                                     "#####",
                                     "#####-####"};
-            }   
+            }
         }
 
-        #endregion  
+        #endregion
 
         #region Company
 
@@ -1269,6 +1269,22 @@ namespace Faker.Locales
             }
         }
 
+        public override string[] CompanyProblem
+        {
+            get
+            {
+                return new[] {
+                                  "update failed",
+                                  "crashes",
+                                  "doesn't start",
+                                  "hangs",
+                                  "doesn't respond",
+                                  "is slow"
+                };
+            }
+        }
+
+
         public override string[] CompanyDescriptor
         {
             get
@@ -1378,7 +1394,7 @@ namespace Faker.Locales
             }
         }
 
-        public override string[] CompanyNoun    
+        public override string[] CompanyNoun
         {
             get
             {
@@ -1496,8 +1512,11 @@ namespace Faker.Locales
             {
                 return new[] {
                                     "@{Name.GetLastName} #{CompanySuffix}",
-                                    "@{Name.GetLastName}-@{Name.GetLastName}",
-                                    "@{Name.GetLastName}, @{Name.GetLastName} and @{Name.GetLastName}"};
+                                    "@{Name.GetLastName} #{CompanySuffix}",
+                                    "@{Name.GetLastName}-@{Name.GetLastName} #{CompanySuffix}",
+                                    "@{Name.GetLastName} #{CompanySuffix}",
+                                    "@{Name.GetLastName} and @{Name.GetLastName} #{CompanySuffix}"};
+
             }
         }
 
@@ -5033,7 +5052,7 @@ namespace Faker.Locales
                                     "Ms.",
                                     "Miss",
                                     "Dr."};
-            }   
+            }
         }
 
         public override string[] NameSuffix
@@ -5052,7 +5071,7 @@ namespace Faker.Locales
                                     "DDS",
                                     "PhD",
                                     "DVM"};
-            }       
+            }
         }
 
         public override string[] NameFormat // Name format is kinda dirty. Need to improve this implementation later
@@ -5063,7 +5082,7 @@ namespace Faker.Locales
                                     "{0.8}{FirstName} {LastName}", // {0.8} means probability
                                     "#{NamePrefix} {FirstName} {LastName}",
                                     "{FirstName} {LastName} #{NamePrefix}"};
-            }   
+            }
         }
 
         #endregion
@@ -6388,7 +6407,7 @@ namespace Faker.Locales
         {
             get { return new[] { "deposit", "withdrawal", "payment", "invoice" }; }
         }
-        
+
         public override Dictionary<string, Object> Currency
         {
             get

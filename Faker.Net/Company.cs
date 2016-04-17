@@ -23,6 +23,11 @@ namespace Faker
             return Selector.GetRandomItemFromList(locale.CompanySuffix);
         }
 
+        public string GetProblem()
+        {
+            return Selector.GetRandomItemFromList(locale.CompanyProblem);
+        }
+
         public string GetCatchPhraseAdjective()
         {
             return Selector.GetRandomItemFromList(locale.CompanyAdjective);
@@ -38,9 +43,14 @@ namespace Faker
             return Selector.GetRandomItemFromList(locale.CompanyNoun);
         }
 
-        public string GetCatchPhase()
+        public string GetCatchPhrase()
         {
             return string.Format("{0} {1} {2}", GetCatchPhraseAdjective(), GetCatchPhraseDescriptor(), GetCatchPhraseNoun());
+        }
+
+        public string GetProblemPhrase()
+        {
+            return string.Format("{0} {1} {2}", GetCatchPhraseDescriptor(), GetCatchPhraseNoun(), GetProblem());
         }
     }
 }

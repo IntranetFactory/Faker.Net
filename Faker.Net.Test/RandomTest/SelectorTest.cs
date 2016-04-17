@@ -9,10 +9,10 @@ namespace Faker.Net.Test.RandomTest
     public class SelectorTest
     {
         [TestMethod]
-        public void TestMultupleSelect()
+        public void TestMultipleSelect()
         {
             // Test the even distribution
-            const int iter = 10000000;
+            const int iter = 3000000;
             const int sourceSize = 40;
             const int selectionSize = 5;
             const float accuracy = 0.01f;

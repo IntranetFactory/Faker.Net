@@ -30,6 +30,7 @@ namespace Faker.Locales
         public abstract string[] CompanyDescriptor { get; }
         public abstract string[] CompanyNoun { get; }
         public abstract string[] CompanyNameFormat { get; }
+        public abstract string[] CompanyProblem { get; }
 
         // Name
         public abstract string[] FirstName { get; }
